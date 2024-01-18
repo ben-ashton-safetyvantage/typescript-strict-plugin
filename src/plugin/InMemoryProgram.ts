@@ -28,7 +28,7 @@ export class InMemoryProgram {
   ): ts.SourceFile | undefined {
     // Assume the file is canonicalized and absolute.
     const path = fileName as ts.Path;
-    let sourceFile = this.info.project.getSourceFile(path);
+    let sourceFile = this.info.languageService.getProgram()?.getSourceFile(path);
 
     // This case occurs when trying to resolve .d.ts outputs of project references.
     if (!sourceFile && languageVersionOrOptions) {

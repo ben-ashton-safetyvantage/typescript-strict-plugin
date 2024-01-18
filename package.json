@@ -35,7 +35,8 @@
     "prettier": "prettier --loglevel error --write .",
     "prettier:ci": "prettier --check .",
     "build": "tsc",
-    "dev": "tsc --watch -p ."
+    "dev": "tsc --watch -p .",
+    "prepare": "npm run build"
   },
   "jest": {
     "preset": "ts-jest",
